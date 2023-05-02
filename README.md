@@ -19,6 +19,18 @@ The Stewart Platform is a type of parallel manipulator with six degrees of freed
 
 ![Stewart Platform](https://github.com/mlayek21/Stewart-Platform/blob/main/Files/Stewert%20v14.png)
 
+## URDF File Details
+
+- This repository includes a URDF file that describes the Stewart Platform model. The URDF file contains information on the robot's links, joints, and sensors, as well as its visualization and collision properties. However, to create the URDF of the parallel mechanism, we first need to convert it into an open chain and then compile it as a URDF.
+
+- Once the URDF file is created, the model can be assembled in a physics simulator by adding constraints. The simulator allows us to simulate the motion and behavior of the platform in real-world physics.
+
+- In the case of the Stewart Platform model, it is necessary to ensure that all the joints are properly connected to form a parallel chain. The image below shows an example of the joint connections in the Stewart Platform model.
+-  <a href="url"><img src="https://github.com/mlayek21/Stewart-Platform/blob/main/Files/URDF.jpeg" align="center" height="600" width="800" ></a>
+
+By simulating the model in a physics simulator, we can study its behavior and optimize its performance for various applications.
+
+
 # Inverse Kinematics of Stewart Platform:
 The inverse kinematics of a Stewart Platform is the process of determining the joint angles required to position the platform in a specific orientation. Since the platform has six degrees of freedom, six equations are required to determine the joint angles. The inverse kinematics of the Stewart Platform can be solved using geometric, analytical, or numerical methods. The solution to the inverse kinematics problem is important for precise control of the platform, which is essential in applications such as flight simulators, motion platforms, and virtual reality systems. However, for certain applications that require the platform to have a reduced degree of freedom, such as RPR 3dof, we can restrict the translational motion of the platform. This simplifies the inverse kinematics problem and allows for precise control of the platform with fewer degrees of freedom.
 
