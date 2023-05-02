@@ -14,9 +14,9 @@ Standard notation for the fundamental parameters that determine the mechanical c
 
 - $\gamma_P\to$ Half of angle between two anchors on the platform
 
-We may define $\psi_B \in R^{6 \times 1} ~ \& ~ \psi_P\in R^{6 \times 1}$ and the polar coordinates of the anchors on a unit circle radius using these $\gamma_B ~\& ~ \gamma_P$. These are derived from the gamma values of $B ~\&~ P$.
+We may define $\psi_B \in R^{6 \times 1}$ & $\psi_P\in R^{6 \times 1}$ and the polar coordinates of the anchors on a unit circle radius using these $\gamma_B$ & $\gamma_P$. These are derived from the gamma values of $B$ and $P$.
 
-If we have $r_B~\&~ r_P$, then we may define as the coordinates of the anchors in their respective local frames in cartesian space, which are $B \in R^{6 \times 3} ~ \& ~ P\in R^{6 \times 3}$. For instance, an illustration of the anchor points on the base B may be found below.
+If we have $r_B$ and $r_P$, then we may define as the coordinates of the anchors in their respective local frames in cartesian space, which are $B \in R^{6 \times 3}$ and $P\in R^{6 \times 3}$. For instance, an illustration of the anchor points on the base B may be found below.
 
 ## Positioning Oneself at Home
 
@@ -24,37 +24,48 @@ The gap between the base and the platform at the starting point,, must then be s
 
 Using the usual notation, we must additionally define the rotation matrices.
 
-- $R_z{(\theta)}=\begin{bmatrix}
-  0 & 0 & 0 \\
-  0 & \cos{\theta} & -\sin{\theta} \\
-  1 & \sin{\theta} & \cos{\theta} \\
-  \end{bmatrix} $
-- $R_y{(\theta)}=\begin{bmatrix}
+$$
+R_z{(\theta)}=
+   \begin{bmatrix}
+   \cos{\theta} & -\sin{\theta} & 0 \\
+   \sin{\theta} & \cos{\theta} & 0 \\
+   0 & 0 & 1 \\
+   \end{bmatrix}
+$$
+
+$$
+R_y{(\theta)}=
+  \begin{bmatrix}
   \cos{\theta} & 0 & \sin{\theta} \\
   0 & 1 & 0 \\
   -\sin{\theta} & 0 & \cos{\theta} \\
-  \end{bmatrix} $
-- $R_x{(\theta)}=\begin{bmatrix}
-  \cos{\theta} & -\sin{\theta} & 0 \\
-  \sin{\theta} & \cos{\theta} & 0 \\
-  1 & 0 & 0 \\
-  \end{bmatrix} $
+  \end{bmatrix}
+$$
 
+$$
+R_x{(\theta)}=
+  \begin{bmatrix}
+  1 & 0 & 0 \\
+  0 & \cos{\theta} & -\sin{\theta} \\
+  0 & \sin{\theta} & \cos{\theta} \\
+  \end{bmatrix}
+$$
 
 ## Using Linear Actuators to Determine Inverse Kinematics
 
 We may now begin working on the inverse kinematics problem.
 
-Using the target translation vectors $T = (t_x,t_y,t_z)^T$ and the rotation vector $ \theta = (\theta_x, \theta_y, \theta_z)^T $, determine the required leg length.
+Using the target translation vectors $T = (t_x,t_y,t_z)^T$ and the rotation vector $\theta = (\theta_x, \theta_y, \theta_z)^T$, determine the required leg length.
 
 After the plate has been rotated and translated as desired, all that remains is to determine the new locations of the various anchors.
 
 Given that each leg's job is to establish a connection between the base and the platform's anchor, the required vector (direction and length) for each leg is simply the leg's location in 3D space with respect to its corresponding base anchor.
 $$l = T+H+p+R(\theta)-B$$
-Where, $T~ \& ~H$ are in $R^{3 \times 1}$ replicated 6 times to have dimensions $R^{3 \times 6}$ to facilitate matrix calculations.
+Where, $T$ and $H$ are in $R^{3 \times 1}$ replicated 6 times to have dimensions $R^{3 \times 6}$ to facilitate matrix calculations.
 
 It's possible to interpret this as,
-$$l = desired~translation+displacement_{base~center,home~pos}+ coordinate~rotation_{global~frame}$$
+
+$$l = Desired~~Translation+displacement(Base~~Center,Home~~Pos) + Coordinate~~Rotation(globalframe)$$
 
 A leg's length is simply the leg vector's magnitude.
 $$|l| = (l_{k,x}^2+l_{k,y}^2+l_{k,z}^2)^{0.5}$$
