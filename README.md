@@ -95,4 +95,23 @@ And that's only to figure out the inverse kinematics of linear actuator-driven S
 
 ![IK](https://github.com/mlayek21/Stewart-Platform/blob/main/output4.png) ![IK1](https://github.com/mlayek21/Stewart-Platform/blob/main/output2.png)
 
+# Linear Actuators README
 
+This README provides details on the linear actuator function developed in this repository. The linear actuator function converts servo motion to linear actuation using PWM signals. PWM stands for Pulse-Width Modulation, which is a technique for controlling the amount of power delivered to a device by rapidly turning the power on and off. By varying the duty cycle (the proportion of time that the power is on) and the frequency of the pulses, we can control the position, speed, and force of the linear actuator.
+
+The linear actuator function uses the following formula to calculate the actuation step size:
+```
+frequency = 50                                   
+max_force = 1000                                 
+steps = int(actuation_duration * frequency)  
+pwm_period = 1.0 / frequency                  
+duty_cycle = 0.5                            
+pwm_high_time = pwm_period * duty_cycle 
+actuation_step = [l / steps for l in linear_distance]
+pwm_signal = i * pwm_period % pwm_period < pwm_high_time
+```
+where 'linear_distance' is an array of the desired linear distances to be covered by each actuator, 'steps' is the number of PWM steps required to cover the distance in the given actuation duration, and 'actuation_step' is the step size for each actuator.
+
+The function then generates PWM signals with a frequency of 50 Hz and a duty cycle of 50%, and actuates the linear actuators according to the desired distance and duration. The function also applies a maximum force of 1000 N.M to each actuator to ensure stability and safety.
+
+By using this function, users can easily convert servo motion to linear actuation and control the position, speed, and force of the linear actuators in their applications.
