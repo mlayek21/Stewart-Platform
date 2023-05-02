@@ -127,3 +127,8 @@ where 'linear_distance' is an array of the desired linear distances to be covere
 The function then generates PWM signals with a frequency of 50 Hz and a duty cycle of 50%, and actuates the linear actuators according to the desired distance and duration. The function also applies a maximum force of 1000 N.M to each actuator to ensure stability and safety.
 
 By using this function, users can easily convert servo motion to linear actuation and control the position, speed, and force of the linear actuators in their applications.
+
+```
+Author: Monojit Layek
+Licence: This model is provided under the MIT License. Feel free to use and modify the model as you wish.
+```
