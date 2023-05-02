@@ -1,8 +1,26 @@
-# 6-6 Stewart Platform Inverse Kinematic
+# Stewart Platform Model Description:
 
-Six legs join the base to the platform in the simplest form of Stewart Platform. They are set up in three sets of two, linked together by universal joints, and controlled in a linear fashion. In this context, "anchors" refer to the points at which the legs are attached to the foundation and the platforms.
+This document provides details on our Stewart Platform model, including its URDF file, inverse kinematics, and real-world physics simulation.
+
+## Overview
+
+The Stewart Platform is a type of parallel manipulator with six degrees of freedom. It consists of a fixed base, a moving platform, and six legs that connect the base and the platform. The legs are actuated by linear actuators, which allows the platform to move in three translational and three rotational directions.
+
+## Details
+
+- **Base:** The base of the model is made of aluminum material.
+- **Platform:** The platform of the model is also made of aluminum material.
+- **Cylinder Material:** The cylinder material is made of aluminum.
+- **Universal Joint Pin:** The universal joint pin is made of steel.
+- **Piston Rod:** The piston rod is made of titanium.
+- **Model Weight:** The total weight of the model is 37.5 kg.
+- **Base and Platform Radius:** The base and platform have a radius of 200 mm.
+- **Base to Platform Height:** The distance between the base and platform is 257.5 mm.
 
 ![Stewart Platform](https://github.com/mlayek21/Stewart-Platform/blob/main/Stewert%20v14.png)
+
+# Inverse Kinematics of Stewart Platform:
+The inverse kinematics of a Stewart Platform is the process of determining the joint angles required to position the platform in a specific orientation. Since the platform has six degrees of freedom, six equations are required to determine the joint angles. The inverse kinematics of the Stewart Platform can be solved using geometric, analytical, or numerical methods. The solution to the inverse kinematics problem is important for precise control of the platform, which is essential in applications such as flight simulators, motion platforms, and virtual reality systems. However, for certain applications that require the platform to have a reduced degree of freedom, such as RPR 3dof, we can restrict the translational motion of the platform. This simplifies the inverse kinematics problem and allows for precise control of the platform with fewer degrees of freedom.
 
 ## Base and Platform Anchors
 
@@ -76,3 +94,5 @@ Simply adding the displacement of each leg's anchor at the ground yields the leg
 And that's only to figure out the inverse kinematics of linear actuator-driven Stewart platforms.
 
 ![IK](https://github.com/mlayek21/Stewart-Platform/blob/main/output4.png) ![IK1](https://github.com/mlayek21/Stewart-Platform/blob/main/output2.png)
+
+
