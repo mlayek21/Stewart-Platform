@@ -2,6 +2,8 @@
 
 Six legs join the base to the platform in the simplest form of Stewart Platform. They are set up in three sets of two, linked together by universal joints, and controlled in a linear fashion. In this context, "anchors" refer to the points at which the legs are attached to the foundation and the platforms.
 
+![Stewart Platform](https://github.com/mlayek21/Stewart-Platform/blob/main/Stewert%20v14.png)
+
 ## Base and Platform Anchors
 
 Standard notation for the fundamental parameters that determine the mechanical configuration is
@@ -17,6 +19,9 @@ Standard notation for the fundamental parameters that determine the mechanical c
 We may define $\psi_B \in R^{6 \times 1}$ & $\psi_P\in R^{6 \times 1}$ and the polar coordinates of the anchors on a unit circle radius using these $\gamma_B$ &  $\gamma_P$. These are derived from the gamma values of $B$ and $P$.
 
 If we have $r_B$ and $r_P$, then we may define as the coordinates of the anchors in their respective local frames in cartesian space, which are $B \in R^{6 \times 3}$ and $P\in R^{6 \times 3}$. For instance, an illustration of the anchor points on the base B may be found below.
+
+
+![base platform dimention](https://github.com/mlayek21/Stewart-Platform/blob/main/output1.png)
 
 ## Positioning Oneself at Home
 
@@ -69,3 +74,5 @@ $$|l| = (l_{k,x}^2+l_{k,y}^2+l_{k,z}^2)^{0.5}$$
 Simply adding the displacement of each leg's anchor at the ground yields the leg's position relative to the global frame's centre of base.
 
 And that's only to figure out the inverse kinematics of linear actuator-driven Stewart platforms.
+
+![IK](https://github.com/mlayek21/Stewart-Platform/blob/main/output2.png) ![IK1](https://github.com/mlayek21/Stewart-Platform/blob/main/output3.png)
