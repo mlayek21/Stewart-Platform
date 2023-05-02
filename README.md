@@ -14,9 +14,9 @@ Standard notation for the fundamental parameters that determine the mechanical c
 
 - $\gamma_P\to$ Half of angle between two anchors on the platform
 
-We may define $\psi_B \in R^{6 \times 1} ~ \&~ \psi_P\in R^{6 \times 1}$ and the polar coordinates of the anchors on a unit circle radius using these $\gamma_B ~\& ~ \gamma_P$. These are derived from the gamma values of $B ~\&~ P$.
+We may define $\psi_B \in R^{6 \times 1} ~ \& ~ \psi_P\in R^{6 \times 1}$ and the polar coordinates of the anchors on a unit circle radius using these $\gamma_B ~\& ~ \gamma_P$. These are derived from the gamma values of $B ~\&~ P$.
 
-If we have $r_B~\&~ r_P$, then we may define as the coordinates of the anchors in their respective local frames in cartesian space, which are $B \in R^{6 \times 3} ~ \&~ P\in R^{6 \times 3}$. For instance, an illustration of the anchor points on the base B may be found below.
+If we have $r_B~\&~ r_P$, then we may define as the coordinates of the anchors in their respective local frames in cartesian space, which are $B \in R^{6 \times 3} ~ \& ~ P\in R^{6 \times 3}$. For instance, an illustration of the anchor points on the base B may be found below.
 
 ## Positioning Oneself at Home
 
