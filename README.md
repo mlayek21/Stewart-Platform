@@ -95,9 +95,8 @@ And that's only to figure out the inverse kinematics of linear actuator-driven S
 
 ![IK](https://github.com/mlayek21/Stewart-Platform/blob/main/output4.png) ![IK1](https://github.com/mlayek21/Stewart-Platform/blob/main/output2.png)
 
-# Linear Actuators README
-
-This README provides details on the linear actuator function developed in this repository. The linear actuator function converts servo motion to linear actuation using PWM signals. PWM stands for Pulse-Width Modulation, which is a technique for controlling the amount of power delivered to a device by rapidly turning the power on and off. By varying the duty cycle (the proportion of time that the power is on) and the frequency of the pulses, we can control the position, speed, and force of the linear actuator.
+# Linear Actuators
+The linear actuator function converts servo motion to linear actuation using PWM signals. PWM stands for Pulse-Width Modulation, which is a technique for controlling the amount of power delivered to a device by rapidly turning the power on and off. By varying the duty cycle (the proportion of time that the power is on) and the frequency of the pulses, we can control the position, speed, and force of the linear actuator.
 
 The linear actuator function uses the following formula to calculate the actuation step size:
 ```
