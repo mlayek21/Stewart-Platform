@@ -17,7 +17,7 @@ The Stewart Platform is a type of parallel manipulator with six degrees of freed
 - **Base and Platform Radius:** The base and platform have a radius of 200 mm.
 - **Base to Platform Height:** The distance between the base and platform is 257.5 mm.
 
-![Stewart Platform](https://github.com/mlayek21/Stewart-Platform/blob/main/Stewert%20v14.png)
+![Stewart Platform](https://github.com/mlayek21/Stewart-Platform/blob/main/Files/Stewert%20v14.png)
 
 # Inverse Kinematics of Stewart Platform:
 The inverse kinematics of a Stewart Platform is the process of determining the joint angles required to position the platform in a specific orientation. Since the platform has six degrees of freedom, six equations are required to determine the joint angles. The inverse kinematics of the Stewart Platform can be solved using geometric, analytical, or numerical methods. The solution to the inverse kinematics problem is important for precise control of the platform, which is essential in applications such as flight simulators, motion platforms, and virtual reality systems. However, for certain applications that require the platform to have a reduced degree of freedom, such as RPR 3dof, we can restrict the translational motion of the platform. This simplifies the inverse kinematics problem and allows for precise control of the platform with fewer degrees of freedom.
@@ -39,7 +39,7 @@ We may define $\psi_B \in R^{6 \times 1}$ & $\psi_P\in R^{6 \times 1}$ and the p
 If we have $r_B$ and $r_P$, then we may define as the coordinates of the anchors in their respective local frames in cartesian space, which are $B \in R^{6 \times 3}$ and $P\in R^{6 \times 3}$. For instance, an illustration of the anchor points on the base B may be found below.
 
 
-![base platform dimention](https://github.com/mlayek21/Stewart-Platform/blob/main/output1.png)
+![base platform dimention](https://github.com/mlayek21/Stewart-Platform/blob/main/Files/output1.png)
 
 ## Positioning Oneself at Home
 
@@ -93,7 +93,7 @@ Simply adding the displacement of each leg's anchor at the ground yields the leg
 
 And that's only to figure out the inverse kinematics of linear actuator-driven Stewart platforms.
 
-![IK](https://github.com/mlayek21/Stewart-Platform/blob/main/output4.png) ![IK1](https://github.com/mlayek21/Stewart-Platform/blob/main/output2.png)
+![IK](https://github.com/mlayek21/Stewart-Platform/blob/main/Files/output4.png) ![IK1](https://github.com/mlayek21/Stewart-Platform/blob/main/Files/output2.png)
 
 # Linear Actuators
 The linear actuator function converts servo motion to linear actuation using PWM signals. PWM stands for Pulse-Width Modulation, which is a technique for controlling the amount of power delivered to a device by rapidly turning the power on and off. By varying the duty cycle (the proportion of time that the power is on) and the frequency of the pulses, we can control the position, speed, and force of the linear actuator.
