@@ -26,7 +26,8 @@ The Stewart Platform is a type of parallel manipulator with six degrees of freed
 - Once the URDF file is created, the model can be assembled in a physics simulator by adding constraints. The simulator allows us to simulate the motion and behavior of the platform in real-world physics.
 
 - In the case of the Stewart Platform model, it is necessary to ensure that all the joints are properly connected to form a parallel chain. The image below shows an example of the joint connections in the Stewart Platform model.
--  <a href="url"><img src="https://github.com/mlayek21/Stewart-Platform/blob/main/Files/URDF.jpeg" align="center" height="600" width="800" ></a>
+  
+  <a href="url"><img src="https://github.com/mlayek21/Stewart-Platform/blob/main/Files/URDF.jpeg" align="center" height="600" width="800" ></a>
 
 By simulating the model in a physics simulator, we can study its behavior and optimize its performance for various applications.
 
