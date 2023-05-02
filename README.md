@@ -128,6 +128,35 @@ The function then generates PWM signals with a frequency of 50 Hz and a duty cyc
 
 By using this function, users can easily convert servo motion to linear actuation and control the position, speed, and force of the linear actuators in their applications.
 
+# Simmulation:
+- **Test 1:** To simulate RPR 3DOF motion, we used a 6-DOF Stewart platform with the platform locked to a 100mm displacement towards the Z-axis with respect to the platform reference frame. We then simulated a sequence of motions as follows:
+
+      - Yaw rotation of 30 degrees in 6 seconds
+      - Roll rotation of 20 degrees in 2 seconds
+      - Pitch rotation of 15 degrees in 2 seconds
+
+     [![Watch the video](https://img.youtube.com/vi/6DpNRDTrT_E/0.jpg)](https://www.youtube.com/watch?v=6DpNRDTrT_E)
+
+- **Test 2:**
+
+      - 30 degrees yaw in 3 seconds and return back to home position within 3 seconds
+      - 15 degrees pitch in 2 seconds return back to home position within 2 seconds
+      - 15 degrees roll in 1 seconds return back to home position within 1 seconds 
+
+     [![Watch the video](https://img.youtube.com/vi/1y8bOXKn7Hw/0.jpg)](https://www.youtube.com/watch?v=1y8bOXKn7Hw)
+     
+     
+- **Test 3:** In the 6DOF simulation, we designed a custom environment and utilized custom function to generate a spiral trajectory for the platform. Custom Python scripts were used to generate forces and torques for each actuator to achieve accurate motion. This simulation highlights the versatility and precision of the Stewart platform for robotics and automation.
+
+     [![Watch the video](https://img.youtube.com/vi/VOnuMit4sS8/0.jpg)](https://www.youtube.com/watch?v=VOnuMit4sS8)
+     
+     
+- **Conclusion**: 
+  - The simulation was performed using a custom Python script that utilized the PyBullet physics engine for simulating the motion of the platform. The script included control algorithms that generated the required forces and torques for achieving the desired motion. We also designed a custom simulation environment that closely resembled the real-world setup of the platform.
+
+  - During the simulation, we monitored the position and orientation of the platform at each time step and recorded the resulting motion trajectories. The simulation results showed that the platform was able to achieve the desired RPR 3DOF motion accurately and smoothly.
+
+  - Overall, this simulation provides valuable insights into the behavior of the RPR platform and can be used to optimize its design and control algorithms for real-world applications.
 ```
 Author: Monojit Layek
 Licence: This model is provided under the MIT License. Feel free to use and modify the model as you wish.
