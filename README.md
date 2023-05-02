@@ -1,6 +1,8 @@
 # 6-6 Stewart Platform Inverse Kinematic
 
 Six legs join the base to the platform in the simplest form of Stewart Platform. They are set up in three sets of two, linked together by universal joints, and controlled in a linear fashion. In this context, "anchors" refer to the points at which the legs are attached to the foundation and the platforms.
+![Stewart Platform](Stewert v14.png)
+
 
 ## Base and Platform Anchors
 
