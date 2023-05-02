@@ -75,4 +75,4 @@ Simply adding the displacement of each leg's anchor at the ground yields the leg
 
 And that's only to figure out the inverse kinematics of linear actuator-driven Stewart platforms.
 
-![IK](https://github.com/mlayek21/Stewart-Platform/blob/main/output2.png) ![IK1](https://github.com/mlayek21/Stewart-Platform/blob/main/output3.png)
+![IK](https://github.com/mlayek21/Stewart-Platform/blob/main/output4.png) ![IK1](https://github.com/mlayek21/Stewart-Platform/blob/main/output2.png)
