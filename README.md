@@ -130,13 +130,25 @@ By using this function, users can easily convert servo motion to linear actuatio
     - Pitch rotation of 15 degrees in 2 seconds
 
 
-- **Test 2:**
+
+https://user-images.githubusercontent.com/110429424/235957331-41c4e539-c187-4858-9de4-0738b5ab87df.mp4
+
+
+- **Test 2:** Simulated a sequence of motions as follows:
   - 30 degrees yaw in 3 seconds and return back to home position within 3 seconds
   - 15 degrees pitch in 2 seconds return back to home position within 2 seconds
   - 15 degrees roll in 1 seconds return back to home position within 1 seconds 
 
 
+
+https://user-images.githubusercontent.com/110429424/235957369-8838f729-b743-4eab-8f6b-21cb279dce3c.mp4
+
+
 - **Test 3:** In the 6DOF simulation, we designed a custom environment and utilized custom function to generate a spiral trajectory for the platform. Custom Python scripts were used to generate forces and torques for each actuator to achieve accurate motion. This simulation highlights the versatility and precision of the Stewart platform for robotics and automation.     
+
+
+
+https://user-images.githubusercontent.com/110429424/235957424-e4e19b66-99c2-4d0a-a2d2-302d53abf213.mp4
 
 
 - **Conclusion**: 
