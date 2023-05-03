@@ -151,7 +151,7 @@ https://user-images.githubusercontent.com/110429424/235957369-8838f729-b743-4eab
 https://user-images.githubusercontent.com/110429424/235957424-e4e19b66-99c2-4d0a-a2d2-302d53abf213.mp4
 
 
-- **Conclusion**: 
+# Conclusion
   - The simulation was performed using a custom Python script that utilized the PyBullet physics engine for simulating the motion of the platform. The script included control algorithms that generated the required forces and torques for achieving the desired motion. We also designed a custom simulation environment that closely resembled the real-world setup of the platform.
 
   - During the simulation, we monitored the position and orientation of the platform at each time step and recorded the resulting motion trajectories. The simulation results showed that the platform was able to achieve the desired RPR 3DOF motion accurately and smoothly.
