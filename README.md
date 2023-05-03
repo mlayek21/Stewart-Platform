@@ -1,5 +1,5 @@
 # Stewart Platform
-[![release](https://img.shields.io/github/release/RainBowAurora/StewartPlatform.svg)](https://github.com/mlayek21/Stewart-Platform/releases)  <a href="https://github.com/mlayek21/Stewart-Platform/actionsa"><img alt="GitHub Actions status" src="https://github.com/RainBowAurora/StewartPlatform/actions/workflows/kinetic_check.yml/badge.svg"></a>  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mlayek21/Stewart-Platform/main/LICENSE)
+[![release](https://img.shields.io/github/release/RainBowAurora/StewartPlatform.svg)](https://github.com/mlayek21/Stewart-Platform/releases)  <a href="https://github.com/mlayek21/Stewart-Platform/actions"><img alt="GitHub Actions status" src="https://github.com/RainBowAurora/StewartPlatform/actions/workflows/kinetic_check.yml/badge.svg"></a>  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mlayek21/Stewart-Platform/main/LICENSE)
 
 This document provides details on our Stewart Platform model, including its URDF file, inverse kinematics, and real-world physics simulation.
 
