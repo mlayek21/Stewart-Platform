@@ -1,13 +1,12 @@
-# Stewart Platform Model Description:
+# Stewart Platform
+[![release](https://img.shields.io/github/release/RainBowAurora/StewartPlatform.svg)](https://github.com/mlayek21/Stewart-Platform/releases)  <a href="https://github.com/mlayek21/Stewart-Platform/actionsa"><img alt="GitHub Actions status" src="https://github.com/RainBowAurora/StewartPlatform/actions/workflows/kinetic_check.yml/badge.svg"></a>  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mlayek21/Stewart-Platform/main/LICENSE)
 
 This document provides details on our Stewart Platform model, including its URDF file, inverse kinematics, and real-world physics simulation.
 
-## Overview
-
+# Model Description
 The Stewart Platform is a type of parallel manipulator with six degrees of freedom. It consists of a fixed base, a moving platform, and six legs that connect the base and the platform. The legs are actuated by linear actuators, which allows the platform to move in three translational and three rotational directions.
 
-## Details
-
+## Model Details
 - **Base:** The base of the model is made of aluminum material.
 - **Platform:** The platform of the model is also made of aluminum material.
 - **Cylinder Material:** The cylinder material is made of aluminum.
@@ -20,7 +19,6 @@ The Stewart Platform is a type of parallel manipulator with six degrees of freed
 ![Stewart Platform](https://github.com/mlayek21/Stewart-Platform/blob/main/Files/Stewert%20v14.png)
 
 ## URDF File Details
-
 - This repository includes a URDF file that describes the Stewart Platform model. The URDF file contains information on the robot's links, joints, and sensors, as well as its visualization and collision properties. However, to create the URDF of the parallel mechanism, we first need to convert it into an open chain and then compile it as a URDF.
 
 - Once the URDF file is created, the model can be assembled in a physics simulator by adding constraints. The simulator allows us to simulate the motion and behavior of the platform in real-world physics.
@@ -32,11 +30,10 @@ The Stewart Platform is a type of parallel manipulator with six degrees of freed
 By simulating the model in a physics simulator, we can study its behavior and optimize its performance for various applications.
 
 
-# Inverse Kinematics of Stewart Platform:
+# Inverse Kinematics of Stewart Platform
 The inverse kinematics of a Stewart Platform is the process of determining the joint angles required to position the platform in a specific orientation. Since the platform has six degrees of freedom, six equations are required to determine the joint angles. The inverse kinematics of the Stewart Platform can be solved using geometric, analytical, or numerical methods. The solution to the inverse kinematics problem is important for precise control of the platform, which is essential in applications such as flight simulators, motion platforms, and virtual reality systems. However, for certain applications that require the platform to have a reduced degree of freedom, such as RPR 3dof, we can restrict the translational motion of the platform. This simplifies the inverse kinematics problem and allows for precise control of the platform with fewer degrees of freedom.
 
 ## Base and Platform Anchors
-
 Standard notation for the fundamental parameters that determine the mechanical configuration is
 
 - $r_B\to$ Radius of Base (Bottom)
@@ -55,7 +52,6 @@ If we have $r_B$ and $r_P$, then we may define as the coordinates of the anchors
 ![base platform dimention](https://github.com/mlayek21/Stewart-Platform/blob/main/Files/output1.png)
 
 ## Positioning Oneself at Home
-
 The gap between the base and the platform at the starting point,, must then be specified. Your resting linear actuator length is. Let's say it's the base plate radius.
 
 Using the usual notation, we must additionally define the rotation matrices.
@@ -84,7 +80,6 @@ $$ R_x{(\theta)}=
 
 
 ## Using Linear Actuators to Determine Inverse Kinematics
-
 We may now begin working on the inverse kinematics problem.
 
 Using the target translation vectors $T = (t_x,t_y,t_z)^T$ and the rotation vector $\theta = (\theta_x, \theta_y, \theta_z)^T$, determine the required leg length.
@@ -128,33 +123,20 @@ The function then generates PWM signals with a frequency of 50 Hz and a duty cyc
 
 By using this function, users can easily convert servo motion to linear actuation and control the position, speed, and force of the linear actuators in their applications.
 
-# Simulation:
+# Simulation
 - **Test 1:** To simulate RPR 3DOF motion, we used a 6-DOF Stewart platform with the platform locked to a 100mm displacement towards the Z-axis with respect to the platform reference frame. We then simulated a sequence of motions as follows:
-
-      - Yaw rotation of 30 degrees in 6 seconds
-      - Roll rotation of 20 degrees in 2 seconds
-      - Pitch rotation of 15 degrees in 2 seconds
-
-    https://user-images.githubusercontent.com/110429424/235838761-e91a4729-4787-4fc8-832e-aa768ffc2209.mp4
+    - Yaw rotation of 30 degrees in 6 seconds
+    - Roll rotation of 20 degrees in 2 seconds
+    - Pitch rotation of 15 degrees in 2 seconds
 
 
 - **Test 2:**
+  - 30 degrees yaw in 3 seconds and return back to home position within 3 seconds
+  - 15 degrees pitch in 2 seconds return back to home position within 2 seconds
+  - 15 degrees roll in 1 seconds return back to home position within 1 seconds 
 
-      - 30 degrees yaw in 3 seconds and return back to home position within 3 seconds
-      - 15 degrees pitch in 2 seconds return back to home position within 2 seconds
-      - 15 degrees roll in 1 seconds return back to home position within 1 seconds 
 
-     https://user-images.githubusercontent.com/110429424/235838624-06085101-13ff-43ae-9283-69601d753f85.mp4
-     
-     
 - **Test 3:** In the 6DOF simulation, we designed a custom environment and utilized custom function to generate a spiral trajectory for the platform. Custom Python scripts were used to generate forces and torques for each actuator to achieve accurate motion. This simulation highlights the versatility and precision of the Stewart platform for robotics and automation.     
-
-   https://user-images.githubusercontent.com/110429424/235838888-71b334f0-31dd-44c2-8c3f-d56a73b0f7a4.mp4
-
-
-     
-
-
 
 
 - **Conclusion**: 
