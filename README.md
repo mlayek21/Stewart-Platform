@@ -135,7 +135,8 @@ By using this function, users can easily convert servo motion to linear actuatio
       - Roll rotation of 20 degrees in 2 seconds
       - Pitch rotation of 15 degrees in 2 seconds
 
-     [![Watch the video](https://img.youtube.com/vi/6DpNRDTrT_E/0.jpg)](https://www.youtube.com/watch?v=6DpNRDTrT_E)
+    https://user-images.githubusercontent.com/110429424/235838761-e91a4729-4787-4fc8-832e-aa768ffc2209.mp4
+
 
 - **Test 2:**
 
@@ -143,14 +144,19 @@ By using this function, users can easily convert servo motion to linear actuatio
       - 15 degrees pitch in 2 seconds return back to home position within 2 seconds
       - 15 degrees roll in 1 seconds return back to home position within 1 seconds 
 
-     [![Watch the video](https://img.youtube.com/vi/1y8bOXKn7Hw/0.jpg)](https://www.youtube.com/watch?v=1y8bOXKn7Hw)
+     https://user-images.githubusercontent.com/110429424/235838624-06085101-13ff-43ae-9283-69601d753f85.mp4
      
      
-- **Test 3:** In the 6DOF simulation, we designed a custom environment and utilized custom function to generate a spiral trajectory for the platform. Custom Python scripts were used to generate forces and torques for each actuator to achieve accurate motion. This simulation highlights the versatility and precision of the Stewart platform for robotics and automation.
+- **Test 3:** In the 6DOF simulation, we designed a custom environment and utilized custom function to generate a spiral trajectory for the platform. Custom Python scripts were used to generate forces and torques for each actuator to achieve accurate motion. This simulation highlights the versatility and precision of the Stewart platform for robotics and automation.     
 
-     [![Watch the video](https://img.youtube.com/vi/VOnuMit4sS8/0.jpg)](https://www.youtube.com/watch?v=VOnuMit4sS8)
+   https://user-images.githubusercontent.com/110429424/235838888-71b334f0-31dd-44c2-8c3f-d56a73b0f7a4.mp4
+
+
      
-     
+
+
+
+
 - **Conclusion**: 
   - The simulation was performed using a custom Python script that utilized the PyBullet physics engine for simulating the motion of the platform. The script included control algorithms that generated the required forces and torques for achieving the desired motion. We also designed a custom simulation environment that closely resembled the real-world setup of the platform.
 
