@@ -96,9 +96,9 @@ $$l = T+H+p+R(\theta)-B$$
 Where, $T$ and $H$ are in $R^{3 \times 1}$ replicated 6 times to have dimensions $R^{3 \times 6}$ to facilitate matrix calculations.
 
 It's possible to interpret this as,
-
-$$l = Desired~~Translation+displacement(Base~~Center,Home~~Pos) + Coordinate~~Rotation(globalframe)$$
-
+```
+l = Desired Translation + displacement(Base Center,Home Pos) + Coordinate Rotation(global frame)
+```
 A leg's length is simply the leg vector's magnitude.
 $$|l| = (l_{k,x}^2+l_{k,y}^2+l_{k,z}^2)^{0.5}$$
 
