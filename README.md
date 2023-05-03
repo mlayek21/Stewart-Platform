@@ -125,13 +125,9 @@ By using this function, users can easily convert servo motion to linear actuatio
 
 # Simulation
 - **Test 1:** To simulate RPR 3DOF motion, we used a 6-DOF Stewart platform with the platform locked to a 100mm displacement towards the Z-axis with respect to the platform reference frame. We then simulated a sequence of motions as follows:
-  - Yaw rotation of 30 degrees in 6 seconds
-  - Roll rotation of 20 degrees in 2 seconds
-  - Pitch rotation of 15 degrees in 2 seconds
-  
-
-
-https://user-images.githubusercontent.com/110429424/235954468-76decbe0-01fb-41a4-b520-eb2e32c90141.mp4
+    - Yaw rotation of 30 degrees in 6 seconds
+    - Roll rotation of 20 degrees in 2 seconds
+    - Pitch rotation of 15 degrees in 2 seconds
 
 
 - **Test 2:**
@@ -139,7 +135,9 @@ https://user-images.githubusercontent.com/110429424/235954468-76decbe0-01fb-41a4
   - 15 degrees pitch in 2 seconds return back to home position within 2 seconds
   - 15 degrees roll in 1 seconds return back to home position within 1 seconds 
 
+
 - **Test 3:** In the 6DOF simulation, we designed a custom environment and utilized custom function to generate a spiral trajectory for the platform. Custom Python scripts were used to generate forces and torques for each actuator to achieve accurate motion. This simulation highlights the versatility and precision of the Stewart platform for robotics and automation.     
+
 
 - **Conclusion**: 
   - The simulation was performed using a custom Python script that utilized the PyBullet physics engine for simulating the motion of the platform. The script included control algorithms that generated the required forces and torques for achieving the desired motion. We also designed a custom simulation environment that closely resembled the real-world setup of the platform.
