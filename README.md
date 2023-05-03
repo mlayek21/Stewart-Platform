@@ -128,7 +128,7 @@ The function then generates PWM signals with a frequency of 50 Hz and a duty cyc
 
 By using this function, users can easily convert servo motion to linear actuation and control the position, speed, and force of the linear actuators in their applications.
 
-# Simmulation:
+# Simulation:
 - **Test 1:** To simulate RPR 3DOF motion, we used a 6-DOF Stewart platform with the platform locked to a 100mm displacement towards the Z-axis with respect to the platform reference frame. We then simulated a sequence of motions as follows:
 
       - Yaw rotation of 30 degrees in 6 seconds
