@@ -1,5 +1,5 @@
 # Stewart Platform
-[![release](https://img.shields.io/github/release/RainBowAurora/StewartPlatform.svg)](https://github.com/mlayek21/Stewart-Platform/releases)  <a href="https://github.com/mlayek21/Stewart-Platform/actions"><img alt="GitHub Actions status" src="https://github.com/RainBowAurora/StewartPlatform/actions/workflows/kinetic_check.yml/badge.svg"></a>  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mlayek21/Stewart-Platform/main/LICENSE)
+[![release](https://img.shields.io/github/release/RainBowAurora/StewartPlatform.svg)](https://github.com/mlayek21/Stewart-Platform/releases)  <a href="https://github.com/mlayek21/Stewart-Platform/actions"><img alt="GitHub Actions status" src="https://github.com/RainBowAurora/StewartPlatform/actions/workflows/kinetic_check.yml/badge.svg"></a>  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mlayek21/Stewart-Platform/main/LICENSE) [![Watch the video](https://img.shields.io/youtube/views/Fk0oGJxcMWg?color=Tomato)](https://youtu.be/Fk0oGJxcMWg)
 
 This document provides details on our Stewart Platform model, including its URDF file, inverse kinematics, and real-world physics simulation.
 
@@ -158,6 +158,8 @@ https://user-images.githubusercontent.com/110429424/236095428-28a2a6c6-12b0-4d3e
   - During the simulation, we monitored the position and orientation of the platform at each time step and recorded the resulting motion trajectories. The simulation results showed that the platform was able to achieve the desired RPR 3DOF motion accurately and smoothly.
 
   - Overall, this simulation provides valuable insights into the behavior of the RPR platform and can be used to optimize its design and control algorithms for real-world applications.
+  
+- Unleashing the Power of the Stewart Platform: 6DOF Simulation and More 👉🏼 [![Watch the video](https://img.shields.io/youtube/views/Fk0oGJxcMWg?style=social)](https://youtu.be/Fk0oGJxcMWg)
 ```
 Author: Monojit Layek
 Licence: This model is provided under the MIT License. Feel free to use and modify the model as you wish.
