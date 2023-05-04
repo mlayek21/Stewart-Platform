@@ -69,7 +69,7 @@ class StewartPlatform:
         rotation = np.array([0, 0, 0])         # rotation in degrees
         self.l  = self.clf.solve(translation, rotation)
         if flag:
-            translation = np.array([0, 0, 0.1])
+            translation = np.array([0, 0, 0.09])
             leg_1  = self.clf.solve(translation, rotation)
             self.linear_actuator(leg_1-self.l, 1)
             time.sleep(1.)
@@ -112,7 +112,7 @@ class StewartPlatform:
         print("actuation step",self.prev_target)
         return 
     def reset_position(self):
-        time.sleep(3)
+        time.sleep(1)
         # # Reset the position of the robot
         self.linear_actuator(-self.prev_target, 1)
         for j in (self.actuator_indices):
@@ -134,6 +134,36 @@ class StewartPlatform:
             self.linear_actuator(dl, t)         # actuate the linear actuator
                        # reset the position
         self.reset_position()
+        cubePos, cubeOrn = p.getBasePositionAndOrientation(self.robotId)
+        for i in range (100):
+            p.stepSimulation()
+            time.sleep(1./240.)
+            cubePos, cubeOrn = p.getBasePositionAndOrientation(self.robotId)
+        
+        # print(cubePos,cubeOrn)
+        # Stop recording the simulation
+        if simulation:
+            p.stopStateLogging(logging_id)
+        p.disconnect()
+        return
+    
+    def fit(self, datas, flag, simulation=False):
+        self.set_env()         # set the environment
+        self.set_constraints()  # set the constraints
+        if simulation:
+            logging_id = p.startStateLogging(p.STATE_LOGGING_VIDEO_MP4, "simulation.mp4")
+        
+        for i,data in enumerate(datas):
+            self.init_stewart(flag[i])  # initialize the stewart platform
+            # print(data)
+            for i in data:
+                trans,rot,t = i
+                l = self.clf.solve(trans, rot) # compute the leg length
+                dl = l-self.l                    # compute the leg actuation distance
+                self.linear_actuator(dl, t)         # actuate the linear actuator
+            
+            # reset the position
+            self.reset_position()
         cubePos, cubeOrn = p.getBasePositionAndOrientation(self.robotId)
         for i in range (100):
             p.stepSimulation()
