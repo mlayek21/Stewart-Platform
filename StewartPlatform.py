@@ -121,7 +121,7 @@ class StewartPlatform:
                                         force=1000)
         return
        
-    def start_simmulation(self, data, simulation=True, flag = True):
+    def start_simmulation(self, data, simulation=False, flag = True):
         self.set_env()         # set the environment
         self.set_constraints()  # set the constraints
         if simulation:
