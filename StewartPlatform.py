@@ -30,7 +30,7 @@ class StewartPlatform:
                         
         # Set the camera position and orientation
         camera_target_position = [0, 0, 0]
-        camera_distance = 1.5
+        camera_distance = 1.25
         camera_yaw = 50
         camera_pitch = -35
         camera_roll = 0
@@ -38,6 +38,7 @@ class StewartPlatform:
                                     cameraPitch = camera_pitch,
                                     cameraTargetPosition = camera_target_position, 
                                     physicsClientId = physicsClient)
+        p.configureDebugVisualizer(p.COV_ENABLE_GUI,0)
         self.n = p.getNumJoints(self.robotId)  # Get the number of joints in the robot
         self.Ind = {}                            # Create a dictionary to store the joint indices
         for i in range(self.n):
@@ -104,32 +105,44 @@ class StewartPlatform:
                     p.setJointMotorControl2(self.robotId, self.actuator_indices[j], p.POSITION_CONTROL,
                                         targetPosition=p.getJointState(self.robotId, self.actuator_indices[j])[0],
                                         force=max_force)
-            time.sleep(1./(5*frequency))
+            time.sleep(1./(frequency))
             p.stepSimulation()
             
         self.prev_target = np.array(actuation_step) * i+ self.prev_target
         print("actuation step",self.prev_target)
         return 
-        
-    def start_simmulation(self, data, flag = True):
-        
+    def reset_position(self):
+        time.sleep(3)
+        # # Reset the position of the robot
+        self.linear_actuator(-self.prev_target, 1)
+        for j in (self.actuator_indices):
+            p.setJointMotorControl2(self.robotId, j, p.POSITION_CONTROL,
+                                        targetPosition=0,
+                                        force=1000)
+        return
+       
+    def start_simmulation(self, data, simulation=True, flag = True):
         self.set_env()         # set the environment
         self.set_constraints()  # set the constraints
-        logging_id = p.startStateLogging(p.STATE_LOGGING_VIDEO_MP4, "simulation.mp4")
+        if simulation:
+            logging_id = p.startStateLogging(p.STATE_LOGGING_VIDEO_MP4, "simulation.mp4")
         self.init_stewart(flag)  # initialize the stewart platform
         for i in data:
             trans,rot,t = i
             l = self.clf.solve(trans, rot) # compute the leg length
             dl = l-self.l                    # compute the leg actuation distance
             self.linear_actuator(dl, t)         # actuate the linear actuator
-            # time.sleep(1)
+                       # reset the position
+        self.reset_position()
         cubePos, cubeOrn = p.getBasePositionAndOrientation(self.robotId)
-        for i in range (50):
+        for i in range (100):
             p.stepSimulation()
             time.sleep(1./240.)
             cubePos, cubeOrn = p.getBasePositionAndOrientation(self.robotId)
+        
         # print(cubePos,cubeOrn)
         # Stop recording the simulation
-        p.stopStateLogging(logging_id)
+        if simulation:
+            p.stopStateLogging(logging_id)
         p.disconnect()
         return

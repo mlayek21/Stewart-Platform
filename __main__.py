@@ -25,30 +25,32 @@ design_variables = [radious_platform, radious_base, half_angle_platform, half_an
 """
 Test 1 : 3DOF Stewart Platform RPR configuration:
         - For RPR configuration set flag True.
-        - 30 degrees yaw within 6 seconds.
-        - 15 degrees pitch within 2 seconds.
-        - 15 degrees roll within 3 seconds.
+        - 30 degrees yaw within 4 seconds.
+        - 20 degrees pitch within 3 seconds.
+        - 15 degrees roll within 2 seconds.
+        - Return back to home position within 1 seconds.
 """
 trans = np.array([0, 0, 0]) # 9 cm in z axis
 # Roll, pitch and yaw angles of the platform
-rot1 = np.array([0, 0, 30]) # 25 degrees yaw
-rot3 = np.array([0, 20, 0]) # 20 degrees roll
-rot2 = np.array([15, 0, 0]) # 15 degrees pitch
+rot1 = np.array([0, 0, 30]) # 30 degrees yaw
+rot3 = np.array([0, 20, 0]) # 20 degrees pitch
+rot2 = np.array([15, 0, 0]) # 15 degrees roll
 
 # Time to reach the desired position
-time1,time2,time3 = 6,3,2 # seconds
+time1,time2,time3 = 4,3,2 # seconds
 # Define the desired end effector position
 data1 = [[trans, rot1,time1], [trans, rot2,time2], [trans, rot3, time3]]
 
 """
 Test 2 : 3DOF Stewart Platform RPR configuration:
-        - 30 degrees yaw and return back to home position within 3 seconds
-        - 15 degrees pitch return back to home position within 2 seconds
-        - 15 degrees roll return back to home position within 1 seconds
+        - 30 degrees yaw and return back to pltform position within 4 seconds
+        - 20 degrees pitch return back to pltform position within 3 seconds
+        - 15 degrees roll return back to pltform position within 2 seconds
+        - Return back to home position within 1 seconds.
 """
 # Translation of the platform
 
-data2 = [[trans, rot1,time1], [trans, - rot1, time1], 
+data2 = [[trans, rot1, time1], [trans, -rot1, time1], 
          [trans, rot2,time2], [trans, -rot2,time2],
          [trans, rot3, time3],[trans, -rot3, time3]]
 
@@ -59,12 +61,12 @@ Test 3 : 6DOF Stewart Platform:
 """
 x,y,z = draw_3d_spiral()
 data3 = [[np.array([x[i], y[i], z[i]]), np.array([0, 0, 0]), 0.2] for i in range(len(x))]
-
+data3.insert(0,[np.array([0,0,0.025]), np.array([0,0,0]), 1])
 # Create the stewart platform object
 clf1 = sp(path, joint_indices, actuator_indices, design_variables)
 clf2 = sp(path, joint_indices, actuator_indices, design_variables)
 clf3 = sp(path, joint_indices, actuator_indices, design_variables)
 if __name__ == '__main__':
-#     clf1.start_simmulation(data1)
-#     clf2.start_simmulation(data2)
-    clf3.start_simmulation(data3,flag=False)
+#     clf1.start_simmulation(data1, simulation=True)
+    clf2.start_simmulation(data2, simulation=True)
+#     clf3.start_simmulation(data3,simulation=True,flag=False)
