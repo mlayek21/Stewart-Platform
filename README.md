@@ -125,30 +125,31 @@ By using this function, users can easily convert servo motion to linear actuatio
 
 # Simulation
 - **Test 1:** To simulate RPR 3DOF motion, we used a 6-DOF Stewart platform with the platform locked to a 100mm displacement towards the Z-axis with respect to the platform reference frame. We then simulated a sequence of motions as follows:
-    - Yaw rotation of 30 degrees in 6 seconds
-    - Roll rotation of 20 degrees in 2 seconds
-    - Pitch rotation of 15 degrees in 2 seconds
+  - For RPR configuration set flag True.
+  - 30 degrees yaw within 4 seconds.
+  - 20 degrees pitch within 3 seconds.
+  - 15 degrees roll within 2 seconds.
+  - Return back to home position within 1 seconds.
 
 
-
-https://user-images.githubusercontent.com/110429424/235957331-41c4e539-c187-4858-9de4-0738b5ab87df.mp4
+https://user-images.githubusercontent.com/110429424/236095394-b51e4789-9c30-4d37-a06c-4e9244cf8f2f.mp4
 
 
 - **Test 2:** Simulated a sequence of motions as follows:
-  - 30 degrees yaw in 3 seconds and return back to home position within 3 seconds
-  - 15 degrees pitch in 2 seconds return back to home position within 2 seconds
-  - 15 degrees roll in 1 seconds return back to home position within 1 seconds 
+  - 30 degrees yaw and return back to pltform position within 4 seconds
+  - 20 degrees pitch return back to pltform position within 3 seconds
+  - 15 degrees roll return back to pltform position within 2 seconds
+  - Return back to home position within 1 seconds.
 
 
 
-https://user-images.githubusercontent.com/110429424/235957369-8838f729-b743-4eab-8f6b-21cb279dce3c.mp4
+https://user-images.githubusercontent.com/110429424/236095412-be4b1613-7bf1-47ee-a1f6-ece23e8696a5.mp4
 
 
 - **Test 3:** In the 6DOF simulation, we designed a custom environment and utilized custom function to generate a spiral trajectory for the platform. Custom Python scripts were used to generate forces and torques for each actuator to achieve accurate motion. This simulation highlights the versatility and precision of the Stewart platform for robotics and automation.     
 
 
-
-https://user-images.githubusercontent.com/110429424/235957424-e4e19b66-99c2-4d0a-a2d2-302d53abf213.mp4
+https://user-images.githubusercontent.com/110429424/236095428-28a2a6c6-12b0-4d3e-8977-037c9f42735c.mp4
 
 
 # Conclusion
