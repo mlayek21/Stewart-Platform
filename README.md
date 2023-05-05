@@ -1,4 +1,6 @@
-# Stewart Platform
+![Stewart Platform-2](https://user-images.githubusercontent.com/110429424/236359256-937feb3f-43f7-4286-bc45-e36d7734f2c7.gif)
+
+
 [![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/mlayek21/Stewart-Platform?color=%23FF7F00&display_name=release&include_prereleases&label=Release&logo=Github&logoColor=%23C0C0C0&sort=date&style=plastic)](https://github.com/mlayek21/Stewart-Platform/releases) <a href="https://github.com/mlayek21/Stewart-Platform/actions"><img alt="GitHub Actions status" src="https://github.com/RainBowAurora/StewartPlatform/actions/workflows/kinetic_check.yml/badge.svg"></a>  [![GitHub](https://img.shields.io/github/license/mlayek21/Stewart-Platform?color=%234682b4&label=License&logo=c&logoColor=%23808080&style=plastic)](https://raw.githubusercontent.com/mlayek21/Stewart-Platform/main/LICENSE)  [![YouTube Video Views](https://img.shields.io/youtube/views/Fk0oGJxcMWg?color=%23800000&label=YouTube&logo=youtube&logoColor=%23dc143c&style=plastic)](https://youtu.be/Fk0oGJxcMWg)
 
 This document provides details on our Stewart Platform model, including its URDF file, inverse kinematics, and real-world physics simulation.
@@ -159,7 +161,9 @@ https://user-images.githubusercontent.com/110429424/236095428-28a2a6c6-12b0-4d3e
 
   - Overall, this simulation provides valuable insights into the behavior of the RPR platform and can be used to optimize its design and control algorithms for real-world applications.
   
-- Unleashing the Power of the Stewart Platform: 6DOF Simulation and More 👉🏼 [![YouTube Video Views](https://img.shields.io/youtube/views/Fk0oGJxcMWg?color=%23ff0000&label=Play%20Video&logo=youtube&logoColor=%23ff0000&style=for-the-badge)](https://youtu.be/Fk0oGJxcMWg)
+---
+> **Unleashing the Power of the Stewart Platform:** 6DOF Simulation and More 👉🏼 [![YouTube Video Views](https://img.shields.io/youtube/views/Fk0oGJxcMWg?color=%23ff0000&label=Play%20Video&logo=youtube&logoColor=%23ff0000&style=for-the-badge)](https://youtu.be/Fk0oGJxcMWg)
+
 ```
 Author: Monojit Layek
 Licence: This model is provided under the MIT License. Feel free to use and modify the model as you wish.
