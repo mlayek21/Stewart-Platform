@@ -1,8 +1,16 @@
 ![Stewart Platform](https://user-images.githubusercontent.com/110429424/236367485-5a0f2e46-17ea-44dc-a7d6-048d4344a79d.gif)
-[<h1 align="center">![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/mlayek21/Stewart-Platform?color=%23ff7f50&display_name=tag&include_prereleases&label=Stewart&logo=github&logoColor=%23d3d3d3&sort=semver)](https://github.com/mlayek21/Stewart-Platform/releases)  [![GitHub](https://img.shields.io/github/license/mlayek21/Stewart-Platform?color=%234169e1&label=License&logo=creativecommons&logoColor=%23d3d3d3)](https://raw.githubusercontent.com/mlayek21/Stewart-Platform/main/LICENSE) <a href="https://github.com/mlayek21/Stewart-Platform/actions"><img alt="GitHub Actions status" src="https://github.com/RainBowAurora/StewartPlatform/actions/workflows/kinetic_check.yml/badge.svg"></a>  [![YouTube Video Views](https://img.shields.io/youtube/views/Fk0oGJxcMWg?color=%23dc143c&label=YouTube&logo=youtube&logoColor=%23ff0000)](https://youtu.be/Fk0oGJxcMWg)</h1>
-This document provides details on our Stewart Platform model, including its URDF file, inverse kinematics, and real-world physics simulation.
+<div align="center">
+  <a href="https://github.com/mlayek21/Stewart-Platform/releases"><img alt="GitHub release (release name instead of tag name)" src="https://img.shields.io/github/v/release/mlayek21/Stewart-Platform?color=%23ff7f50&display_name=tag&include_prereleases&label=Stewart&logo=github&logoColor=%23808080&sort=date"></a>  
+  <a href="https://raw.githubusercontent.com/mlayek21/Stewart-Platform/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/mlayek21/Stewart-Platform?color=%234169e1&label=License&logo=creativecommons&logoColor=%23a9a9a9"></a>
+  <a href="https://github.com/mlayek21/Stewart-Platform/actions"><img alt="GitHub Actions status" src="https://github.com/RainBowAurora/StewartPlatform/actions/workflows/kinetic_check.yml/badge.svg"></a> 
+  <a href="https://youtu.be/Fk0oGJxcMWg"><img alt="YouTube Video Views" src="https://img.shields.io/youtube/views/Fk0oGJxcMWg?color=%23dc143c&label=YouTube&logo=youtube&logoColor=%23ff0000"></a>
+</div>
 
-# Model Description
+---
+
+> This document provides details on our Stewart Platform model, including its URDF file, inverse kinematics, and real-world physics simulation.
+
+# Overview
 The Stewart Platform is a type of parallel manipulator with six degrees of freedom. It consists of a fixed base, a moving platform, and six legs that connect the base and the platform. The legs are actuated by linear actuators, which allows the platform to move in three translational and three rotational directions.
 
 ## Model Details
@@ -17,7 +25,7 @@ The Stewart Platform is a type of parallel manipulator with six degrees of freed
 
 ![Stewart Platform](https://github.com/mlayek21/Stewart-Platform/blob/main/Files/Stewert%20v14.png)
 
-## URDF File Details
+## URDF Details
 - This repository includes a URDF file that describes the Stewart Platform model. The URDF file contains information on the robot's links, joints, and sensors, as well as its visualization and collision properties. However, to create the URDF of the parallel mechanism, we first need to convert it into an open chain and then compile it as a URDF.
 
 - Once the URDF file is created, the model can be assembled in a physics simulator by adding constraints. The simulator allows us to simulate the motion and behavior of the platform in real-world physics.
@@ -29,6 +37,7 @@ The Stewart Platform is a type of parallel manipulator with six degrees of freed
 By simulating the model in a physics simulator, we can study its behavior and optimize its performance for various applications.
 
 # Inverse Kinematics of Stewart Platform
+
 The inverse kinematics of a Stewart Platform is the process of determining the joint angles required to position the platform in a specific orientation. Since the platform has six degrees of freedom, six equations are required to determine the joint angles. The inverse kinematics of the Stewart Platform can be solved using geometric, analytical, or numerical methods. The solution to the inverse kinematics problem is important for precise control of the platform, which is essential in applications such as flight simulators, motion platforms, and virtual reality systems. However, for certain applications that require the platform to have a reduced degree of freedom, such as RPR 3dof, we can restrict the translational motion of the platform. This simplifies the inverse kinematics problem and allows for precise control of the platform with fewer degrees of freedom.
 
 ## Base and Platform Anchors
@@ -161,5 +170,5 @@ https://user-images.githubusercontent.com/110429424/236542318-d370cea6-0fb8-4014
 
 ```
 Author: Monojit Layek
-Licence: This model is provided under the MIT License. Feel free to use and modify the model as you wish.
+Licence: This model is provided under the © MIT License. Feel free to use and modify the model as you wish.
 ```
