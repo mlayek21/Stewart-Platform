@@ -1,7 +1,5 @@
 ![Stewart Platform](https://user-images.githubusercontent.com/110429424/236367485-5a0f2e46-17ea-44dc-a7d6-048d4344a79d.gif)
-
-[![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/mlayek21/Stewart-Platform?color=%23FF7F00&display_name=release&include_prereleases&label=Release&logo=Github&logoColor=%23C0C0C0&sort=date&style=plastic)](https://github.com/mlayek21/Stewart-Platform/releases) <a href="https://github.com/mlayek21/Stewart-Platform/actions"><img alt="GitHub Actions status" src="https://github.com/RainBowAurora/StewartPlatform/actions/workflows/kinetic_check.yml/badge.svg"></a>  [![GitHub](https://img.shields.io/github/license/mlayek21/Stewart-Platform?color=%234682b4&label=License&logo=c&logoColor=%23808080&style=plastic)](https://raw.githubusercontent.com/mlayek21/Stewart-Platform/main/LICENSE)  [![YouTube Video Views](https://img.shields.io/youtube/views/Fk0oGJxcMWg?color=%23800000&label=YouTube&logo=youtube&logoColor=%23dc143c&style=plastic)](https://youtu.be/Fk0oGJxcMWg)
-
+[<h1 align="center">![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/mlayek21/Stewart-Platform?color=%23FF7F00&display_name=release&include_prereleases&label=Release&logo=Github&logoColor=%23C0C0C0&sort=date&style=plastic)](https://github.com/mlayek21/Stewart-Platform/releases) ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/mlayek21/Stewart-Platform/super-linter.yml?label=Build&logo=github&logoColor=%23d3d3d3&style=plastic)  [![GitHub](https://img.shields.io/github/license/mlayek21/Stewart-Platform?color=%234682b4&label=License&logo=c&logoColor=%23808080&style=plastic)](https://raw.githubusercontent.com/mlayek21/Stewart-Platform/main/LICENSE)  [![YouTube Video Views](https://img.shields.io/youtube/views/Fk0oGJxcMWg?color=%23800000&label=YouTube&logo=youtube&logoColor=%23dc143c&style=plastic)](https://youtu.be/Fk0oGJxcMWg)</h1>
 This document provides details on our Stewart Platform model, including its URDF file, inverse kinematics, and real-world physics simulation.
 
 # Model Description
@@ -133,7 +131,8 @@ By using this function, users can easily convert servo motion to linear actuatio
   - Return back to home position within 1 seconds.
 
 
-https://user-images.githubusercontent.com/110429424/236095394-b51e4789-9c30-4d37-a06c-4e9244cf8f2f.mp4
+
+https://user-images.githubusercontent.com/110429424/236542293-2a25bc12-8900-48a0-83c6-896ad4120ecc.mp4
 
 
 - **Test 2:** Simulated a sequence of motions as follows:
@@ -143,14 +142,15 @@ https://user-images.githubusercontent.com/110429424/236095394-b51e4789-9c30-4d37
   - Return back to home position within 1 seconds.
 
 
+https://user-images.githubusercontent.com/110429424/236542304-c84d24be-441e-4c34-8c80-f6634e645b60.mp4
 
-https://user-images.githubusercontent.com/110429424/236095412-be4b1613-7bf1-47ee-a1f6-ece23e8696a5.mp4
 
 
 - **Test 3:** In the 6DOF simulation, we designed a custom environment and utilized custom function to generate a spiral trajectory for the platform. Custom Python scripts were used to generate forces and torques for each actuator to achieve accurate motion. This simulation highlights the versatility and precision of the Stewart platform for robotics and automation.     
 
 
-https://user-images.githubusercontent.com/110429424/236095428-28a2a6c6-12b0-4d3e-8977-037c9f42735c.mp4
+https://user-images.githubusercontent.com/110429424/236542318-d370cea6-0fb8-4014-ab95-5146bd4e67ec.mp4
+
 
 
 # Conclusion
