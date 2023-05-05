@@ -1,5 +1,8 @@
 ![Stewart Platform](https://user-images.githubusercontent.com/110429424/236367485-5a0f2e46-17ea-44dc-a7d6-048d4344a79d.gif)
-[<h1 align="center">![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/mlayek21/Stewart-Platform?color=%23FF7F00&display_name=release&include_prereleases&label=Release&logo=Github&logoColor=%23C0C0C0&sort=date&style=plastic)](https://github.com/mlayek21/Stewart-Platform/releases) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/mlayek21/Stewart-Platform/super-linter.yml?label=Build&logo=github&logoColor=%23d3d3d3&style=plastic)](https://github.com/mlayek21/Stewart-Platform/actions)  [![GitHub](https://img.shields.io/github/license/mlayek21/Stewart-Platform?color=%234682b4&label=License&logo=c&logoColor=%23808080&style=plastic)](https://raw.githubusercontent.com/mlayek21/Stewart-Platform/main/LICENSE)  [![YouTube Video Views](https://img.shields.io/youtube/views/Fk0oGJxcMWg?color=%23800000&label=YouTube&logo=youtube&logoColor=%23dc143c&style=plastic)](https://youtu.be/Fk0oGJxcMWg)</h1>
+[<h1 align="center">![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/mlayek21/Stewart-Platform?color=%23FF7F00&display_name=release&include_prereleases&label=Release&logo=Github&logoColor=%23C0C0C0&sort=date&style=plastic)](https://github.com/mlayek21/Stewart-Platform/releases) 
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/mlayek21/Stewart-Platform/super-linter.yml?label=Build&logo=github&logoColor=%23d3d3d3&style=plastic)](https://github.com/mlayek21/Stewart-Platform/actions)  
+[![GitHub](https://img.shields.io/github/license/mlayek21/Stewart-Platform?color=%234682b4&label=License&logo=c&logoColor=%23808080&style=plastic)](https://raw.githubusercontent.com/mlayek21/Stewart-Platform/main/LICENSE)  
+[![YouTube Video Views](https://img.shields.io/youtube/views/Fk0oGJxcMWg?color=%23800000&label=YouTube&logo=youtube&logoColor=%23dc143c&style=plastic)](https://youtu.be/Fk0oGJxcMWg)</h1>
 This document provides details on our Stewart Platform model, including its URDF file, inverse kinematics, and real-world physics simulation.
 
 # Model Description
@@ -24,10 +27,9 @@ The Stewart Platform is a type of parallel manipulator with six degrees of freed
 
 - In the case of the Stewart Platform model, it is necessary to ensure that all the joints are properly connected to form a parallel chain. The image below shows an example of the joint connections in the Stewart Platform model.
   
-  <a href="url"><img src="https://github.com/mlayek21/Stewart-Platform/blob/main/Files/URDF.jpeg" align="center" height="600" width="800" ></a>
+<a href="url"><img src="https://github.com/mlayek21/Stewart-Platform/blob/main/Files/URDF.jpeg" align="center" height="600" width="800" ></a>
 
 By simulating the model in a physics simulator, we can study its behavior and optimize its performance for various applications.
-
 
 # Inverse Kinematics of Stewart Platform
 The inverse kinematics of a Stewart Platform is the process of determining the joint angles required to position the platform in a specific orientation. Since the platform has six degrees of freedom, six equations are required to determine the joint angles. The inverse kinematics of the Stewart Platform can be solved using geometric, analytical, or numerical methods. The solution to the inverse kinematics problem is important for precise control of the platform, which is essential in applications such as flight simulators, motion platforms, and virtual reality systems. However, for certain applications that require the platform to have a reduced degree of freedom, such as RPR 3dof, we can restrict the translational motion of the platform. This simplifies the inverse kinematics problem and allows for precise control of the platform with fewer degrees of freedom.
@@ -55,29 +57,24 @@ The gap between the base and the platform at the starting point,, must then be s
 
 Using the usual notation, we must additionally define the rotation matrices.
 
-
 $$ R_z{(\theta)}=
    \begin{bmatrix} 
    \cos{\theta} & -\sin{\theta} & 0 \\
    \sin{\theta} & \cos{\theta} & 0 \\
    0 & 0 & 1 \\
-   \end{bmatrix} $$
-   
+   \end{bmatrix} $$  
 $$ R_y{(\theta)}=
   \begin{bmatrix} 
   \cos{\theta} & 0 & \sin{\theta} \\
   0 & 1 & 0 \\
   -\sin{\theta} & 0 & \cos{\theta} \\
   \end{bmatrix} $$
-
 $$ R_x{(\theta)}=
   \begin{bmatrix} 
   1 & 0 & 0 \\
   0 & \cos{\theta} & -\sin{\theta} \\
   0 & \sin{\theta} & \cos{\theta} \\
   \end{bmatrix} $$
-
-
 ## Using Linear Actuators to Determine Inverse Kinematics
 We may now begin working on the inverse kinematics problem.
 
@@ -101,7 +98,6 @@ Simply adding the displacement of each leg's anchor at the ground yields the leg
 And that's only to figure out the inverse kinematics of linear actuator-driven Stewart platforms.
 
 ![IK](https://github.com/mlayek21/Stewart-Platform/blob/main/Files/output4.png) ![IK1](https://github.com/mlayek21/Stewart-Platform/blob/main/Files/output2.png)
-
 # Linear Actuators
 The linear actuator function converts servo motion to linear actuation using PWM signals. PWM stands for Pulse-Width Modulation, which is a technique for controlling the amount of power delivered to a device by rapidly turning the power on and off. By varying the duty cycle (the proportion of time that the power is on) and the frequency of the pulses, we can control the position, speed, and force of the linear actuator.
 
@@ -123,7 +119,7 @@ The function then generates PWM signals with a frequency of 50 Hz and a duty cyc
 By using this function, users can easily convert servo motion to linear actuation and control the position, speed, and force of the linear actuators in their applications.
 
 # Simulation
-- **Test 1:** To simulate RPR 3DOF motion, we used a 6-DOF Stewart platform with the platform locked to a 100mm displacement towards the Z-axis with respect to the platform reference frame. We then simulated a sequence of motions as follows:
+1. **Test 1:** To simulate RPR 3DOF motion, we used a 6-DOF Stewart platform with the platform locked to a 100mm displacement towards the Z-axis with respect to the platform reference frame. We then simulated a sequence of motions as follows:
   - For RPR configuration set flag True.
   - 30 degrees yaw within 4 seconds.
   - 20 degrees pitch within 3 seconds.
