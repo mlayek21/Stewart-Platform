@@ -65,11 +65,13 @@ x,y,z = draw_3d_spiral()
 data3 = [[np.array([x[i], y[i], z[i]]), np.array([0, 0, 0]), 0.2] for i in range(len(x))]
 data3.insert(0,[np.array([0,0,0.025]), np.array([0,0,0]), 1])
 data4 = [data5, data1, data2, data3]
+
 # Create the stewart platform object
 clf1 = sp(path, joint_indices, actuator_indices, design_variables)
 clf2 = sp(path, joint_indices, actuator_indices, design_variables)
 clf3 = sp(path, joint_indices, actuator_indices, design_variables)
 clf4 = sp(path, joint_indices, actuator_indices, design_variables)
+
 if __name__ == '__main__':
     clf1.start_simmulation(data1, simulation=False)
     clf2.start_simmulation(data2, simulation=False)
