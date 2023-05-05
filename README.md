@@ -1,8 +1,5 @@
 ![Stewart Platform](https://user-images.githubusercontent.com/110429424/236367485-5a0f2e46-17ea-44dc-a7d6-048d4344a79d.gif)
-[<h1 align="center">![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/mlayek21/Stewart-Platform?color=%23FF7F00&display_name=release&include_prereleases&label=Release&logo=Github&logoColor=%23C0C0C0&sort=date&style=plastic)](https://github.com/mlayek21/Stewart-Platform/releases) 
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/mlayek21/Stewart-Platform/super-linter.yml?label=Build&logo=github&logoColor=%23d3d3d3&style=plastic)](https://github.com/mlayek21/Stewart-Platform/actions)  
-[![GitHub](https://img.shields.io/github/license/mlayek21/Stewart-Platform?color=%234682b4&label=License&logo=c&logoColor=%23808080&style=plastic)](https://raw.githubusercontent.com/mlayek21/Stewart-Platform/main/LICENSE)  
-[![YouTube Video Views](https://img.shields.io/youtube/views/Fk0oGJxcMWg?color=%23800000&label=YouTube&logo=youtube&logoColor=%23dc143c&style=plastic)](https://youtu.be/Fk0oGJxcMWg)</h1>
+[<h1 align="center">![GitHub release (release name instead of tag name)](https://img.shields.io/github/v/release/mlayek21/Stewart-Platform?color=%23FF7F00&display_name=release&include_prereleases&label=Release&logo=Github&logoColor=%23C0C0C0&sort=date&style=plastic)](https://github.com/mlayek21/Stewart-Platform/releases) [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/mlayek21/Stewart-Platform/super-linter.yml?label=Build&logo=github&logoColor=%23d3d3d3&style=plastic)](https://github.com/mlayek21/Stewart-Platform/actions)  [![GitHub](https://img.shields.io/github/license/mlayek21/Stewart-Platform?color=%234682b4&label=License&logo=c&logoColor=%23808080&style=plastic)](https://raw.githubusercontent.com/mlayek21/Stewart-Platform/main/LICENSE)  [![YouTube Video Views](https://img.shields.io/youtube/views/Fk0oGJxcMWg?color=%23800000&label=YouTube&logo=youtube&logoColor=%23dc143c&style=plastic)](https://youtu.be/Fk0oGJxcMWg)</h1>
 This document provides details on our Stewart Platform model, including its URDF file, inverse kinematics, and real-world physics simulation.
 
 # Model Description
@@ -63,18 +60,21 @@ $$ R_z{(\theta)}=
    \sin{\theta} & \cos{\theta} & 0 \\
    0 & 0 & 1 \\
    \end{bmatrix} $$  
+   
 $$ R_y{(\theta)}=
   \begin{bmatrix} 
   \cos{\theta} & 0 & \sin{\theta} \\
   0 & 1 & 0 \\
   -\sin{\theta} & 0 & \cos{\theta} \\
   \end{bmatrix} $$
+  
 $$ R_x{(\theta)}=
   \begin{bmatrix} 
   1 & 0 & 0 \\
   0 & \cos{\theta} & -\sin{\theta} \\
   0 & \sin{\theta} & \cos{\theta} \\
   \end{bmatrix} $$
+  
 ## Using Linear Actuators to Determine Inverse Kinematics
 We may now begin working on the inverse kinematics problem.
 
