@@ -121,7 +121,10 @@ pwm_high_time = pwm_period * duty_cycle
 actuation_step = [l / steps for l in linear_distance]
 pwm_signal = i * pwm_period % pwm_period < pwm_high_time
 ```
-where 'linear_distance' is an array of the desired linear distances to be covered by each actuator, 'steps' is the number of PWM steps required to cover the distance in the given actuation duration, and 'actuation_step' is the step size for each actuator.
+Where, 
+  - 'linear_distance'-> is an array of the desired linear distances to be covered by each actuator,
+  - 'steps'-> is the number of PWM steps required to cover the distance in the given actuation duration,
+  - 'actuation_step'-> is the step size for each actuator.
 
 The function then generates PWM signals with a frequency of 50 Hz and a duty cycle of 50%, and actuates the linear actuators according to the desired distance and duration. The function also applies a maximum force of 1000 N.M to each actuator to ensure stability and safety.
 
