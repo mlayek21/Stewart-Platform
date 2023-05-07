@@ -113,7 +113,7 @@ The linear actuator function converts servo motion to linear actuation using PWM
 The linear actuator function uses the following formula to calculate the actuation step size:
 ```
 frequency = 50                                   
-max_force = 1000                                 
+max_force = 10                                
 steps = int(actuation_duration * frequency)  
 pwm_period = 1.0 / frequency                  
 duty_cycle = 0.5                            
@@ -126,7 +126,7 @@ Where,
   - 'steps'-> is the number of PWM steps required to cover the distance in the given actuation duration,
   - 'actuation_step'-> is the step size for each actuator.
 
-The function then generates PWM signals with a frequency of 50 Hz and a duty cycle of 50%, and actuates the linear actuators according to the desired distance and duration. The function also applies a maximum force of 1000 N.M to each actuator to ensure stability and safety.
+The function then generates PWM signals with a frequency of 50 Hz and a duty cycle of 50%, and actuates the linear actuators according to the desired distance and duration. The function also applies a maximum force of 10 N.M to each actuator to ensure stability and safety.
 
 By using this function, users can easily convert servo motion to linear actuation and control the position, speed, and force of the linear actuators in their applications.
 
