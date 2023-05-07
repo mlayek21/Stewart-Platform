@@ -107,13 +107,58 @@ Simply adding the displacement of each leg's anchor at the ground yields the leg
 And that's only to figure out the inverse kinematics of linear actuator-driven Stewart platforms.
 
 ![IK](https://github.com/mlayek21/Stewart-Platform/blob/main/Files/output4.png) ![IK1](https://github.com/mlayek21/Stewart-Platform/blob/main/Files/output2.png)
+
 # Linear Actuators
+Our model consists of six linear actuators that are connected to six individual servo motors using a lead screw mechanism. The lead screw mechanism converts the rotational motion of the servo motor into linear motion to actuate the linear actuator. We control the servo motors using PWM (Pulse Width Modulation) technique, which allows us to control the position and speed of each actuator with high precision.
+
+By using a lead screw mechanism, we are able to achieve a high mechanical advantage that allows us to move large loads with high accuracy and precision. The PWM technique provides us with fine-grained control over the position and speed of each actuator, allowing us to achieve smooth and precise motion.
+
+  ![Linearactuator](https://user-images.githubusercontent.com/110429424/236689504-32d416aa-392a-489a-941d-e2273c7410fe.gif)
+
+## Actuator Force Calculation
+
+To calculate the force required for a linear actuator to move a 20 kg mass a full 0.19 m actuation within a time limit of 20 seconds, we would need to consider four elements: friction, acceleration, gravity, and applied force.
+
+In the model actuator is making 63.9° angle with the base and the coefficient of friction is 0.4. Now we can calculate the force required using the following equation:
+$$F_{total} = F_{friction} + F_{accleration}+ F_{load} + F_{applied}$$
+$$F_{total} = \mu F_{N} \cos(\phi) + \frac{m v}{t} + m g \sin(\theta) + F_{applied}$$
+Where, 
+  - $m \to m_{Top}+m_{Load}$ Mass applied on the platform = 34 kg
+    - Let say platform can carry maxload of 20kg
+    - Top weight is 14 kg approx
+  - $g \to$ Earth gravity ($9.81 m/s^2$)
+  - $\theta \to$ Inclination angle (63.94°)
+  - $v \to$ Maximum velocity of actuation ($19 mm/s$)
+  - $t \to$ Time to actuate full length (20 second)
+  - $\mu \to$ Frictional coefficient of lead screw (0.4)
+  - $\phi \to$ Angle of Normal Load (90°)
+    - Let assume load make 90° angle
+  - $F_{N} \to$ Normal Force applied to the actuators
+  - $F_{applied} \to$ Dynamic force ($\pm 10N$)
+  
+After calculation $F_{total} \approx 360N$ is subjected of all six actuator i.e each actuator is carrying maxmium load of 60 N.
+
+Now, The servo torque required for a 60N force in a linear actuator will depend on the mechanical advantage of the actuator system, which is determined by the lead screw pitch and the diameter of the lead screw.
+
+Assuming that the actuator is a simple lead screw system and neglecting any losses due to friction, the torque required can be calculated using the following equation:
+$$T = \frac{F*p}{2 \pi}$$
+
+Where, 
+  - $T \to$ Torque required in each survos (Nm)
+  - $F \to$ Force applied to each actuators (60N)
+  - $p \to$ Lead screw pitch (5mm)
+
+If the lead screw pitch is 5mm (0.005m) and the force required is 60N, then the torque required would be $\approx 0.024 Nm$
+> **Note:** This calculation assumes that the force is applied perpendicular to the lead screw and that there is no friction or other losses in the system. In practice, there may be additional torque required to overcome friction, inertia, or other factors, so it is important to choose a servo motor with sufficient torque margin to ensure reliable operation. We take the factor of safety of 4.
+
+## Pulse-Width Modulation
+
 The linear actuator function converts servo motion to linear actuation using PWM signals. PWM stands for Pulse-Width Modulation, which is a technique for controlling the amount of power delivered to a device by rapidly turning the power on and off. By varying the duty cycle (the proportion of time that the power is on) and the frequency of the pulses, we can control the position, speed, and force of the linear actuator.
 
 The linear actuator function uses the following formula to calculate the actuation step size:
 ```
 frequency = 50                                   
-max_force = 10                                
+max_force = 250                               
 steps = int(actuation_duration * frequency)  
 pwm_period = 1.0 / frequency                  
 duty_cycle = 0.5                            
@@ -124,9 +169,10 @@ pwm_signal = i * pwm_period % pwm_period < pwm_high_time
 Where, 
   - 'linear_distance'-> is an array of the desired linear distances to be covered by each actuator,
   - 'steps'-> is the number of PWM steps required to cover the distance in the given actuation duration,
-  - 'actuation_step'-> is the step size for each actuator.
+  - 'actuation_step'-> is the step size for each actuator,
+  - Maximum linear actuation force.
 
-The function then generates PWM signals with a frequency of 50 Hz and a duty cycle of 50%, and actuates the linear actuators according to the desired distance and duration. The function also applies a maximum force of 10 N.M to each actuator to ensure stability and safety.
+The function then generates PWM signals with a frequency of 50 Hz and a duty cycle of 50%, and actuates the linear actuators according to the desired distance and duration. The function also applies a maximum force of 250 N to each actuator to ensure stability and safety.
 
 By using this function, users can easily convert servo motion to linear actuation and control the position, speed, and force of the linear actuators in their applications.
 
