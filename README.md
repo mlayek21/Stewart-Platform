@@ -23,7 +23,9 @@ The Stewart Platform is a type of parallel manipulator with six degrees of freed
 - **Base and Platform Radius:** The base and platform have a radius of 200 mm.
 - **Base to Platform Height:** The distance between the base and platform is 257.5 mm.
 
-![Stewart Platform](https://github.com/mlayek21/Stewart-Platform/blob/main/Files/Stewert%20v14.png)
+<p align="center">
+  <img src="https://github.com/mlayek21/Stewart-Platform/blob/934f90c2c8667d769d63785964c9c9b61041d0ce/Files/Stewart1%20v2.png">
+</p>
 
 ## URDF Details
 - This repository includes a URDF file that describes the Stewart Platform model. The URDF file contains information on the robot's links, joints, and sensors, as well as its visualization and collision properties. However, to create the URDF of the parallel mechanism, we first need to convert it into an open chain and then compile it as a URDF.
@@ -32,7 +34,9 @@ The Stewart Platform is a type of parallel manipulator with six degrees of freed
 
 - In the case of the Stewart Platform model, it is necessary to ensure that all the joints are properly connected to form a parallel chain. The image below shows an example of the joint connections in the Stewart Platform model.
   
-<a href="url"><img src="https://github.com/mlayek21/Stewart-Platform/blob/main/Files/URDF.jpeg" align="center" height="600" width="800" ></a>
+<p align="center">
+  <img width="800" height="700" src="https://github.com/mlayek21/Stewart-Platform/blob/934f90c2c8667d769d63785964c9c9b61041d0ce/Files/URDF_LINK.png">
+</p>
 
 By simulating the model in a physics simulator, we can study its behavior and optimize its performance for various applications.
 
@@ -55,8 +59,9 @@ We may define $\psi_B \in R^{6 \times 1}$ & $\psi_P\in R^{6 \times 1}$ and the p
 
 If we have $r_B$ and $r_P$, then we may define as the coordinates of the anchors in their respective local frames in cartesian space, which are $B \in R^{6 \times 3}$ and $P\in R^{6 \times 3}$. For instance, an illustration of the anchor points on the base B may be found below.
 
-
-![base platform dimention](https://github.com/mlayek21/Stewart-Platform/blob/main/Files/output1.png)
+<p align="center">
+  <img src="https://github.com/mlayek21/Stewart-Platform/blob/main/Files/output1.png">
+</p>
 
 ## Positioning Oneself at Home
 The gap between the base and the platform at the starting point,, must then be specified. Your resting linear actuator length is. Let's say it's the base plate radius.
