@@ -118,7 +118,7 @@ Our model consists of six linear actuators that are connected to six individual 
 
 By using a lead screw mechanism, we are able to achieve a high mechanical advantage that allows us to move large loads with high accuracy and precision. The PWM technique provides us with fine-grained control over the position and speed of each actuator, allowing us to achieve smooth and precise motion.
 
-  ![Linearactuator](https://user-images.githubusercontent.com/110429424/236689504-32d416aa-392a-489a-941d-e2273c7410fe.gif)
+  ![ball-screw-gif](https://user-images.githubusercontent.com/110429424/236932849-3bbd2d12-02ba-40d0-b16a-270dc0c4cfcb.gif)
 
 ## Actuator Force Calculation
 
