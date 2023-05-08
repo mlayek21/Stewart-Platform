@@ -1,6 +1,7 @@
 from StewartPlatform import StewartPlatform as sp
 import numpy as np
 from draw_3d_spiral import draw_3d_spiral
+from generate_elliptical_points import generate_elliptical_points
 
 """
 3DOF Stewart Platform RPR configuration analysis:
@@ -15,7 +16,8 @@ path = "Stewart/Stewart.urdf"
 joint_indices = [(6, 16), (35, 17), (49, 18), (42, 19), (28, 20)]
 
 # Define the actuators for each pair of linked joints
-actuator_indices = [9, 2, 31, 45, 38, 24]
+actuator_indices = [9, 2, 31, 45, 38, 24]     #[1,0,3,5,4,2][9, 2, 31, 45, 38, 24] 
+                                        # [0: 2, 1: 31, 2: 45, 3: 38, 4: 24, 5: 9]
 
 # Define the stewart platform design variables
 radious_platform, radious_base = 0.2, 0.2         # meters
@@ -64,16 +66,42 @@ data5 = [[np.array([0,0.09,0]), np.array([0,0,0]), 2],
 x,y,z = draw_3d_spiral()
 data3 = [[np.array([x[i], y[i], z[i]]), np.array([0, 0, 0]), 0.2] for i in range(len(x))]
 data3.insert(0,[np.array([0,0,0.025]), np.array([0,0,0]), 1])
-data4 = [data5, data1, data2, data3]
+
+"""
+Test 4 : 6DOF Stewart Platform:
+        - Tracing a 3D elliptical path
+        - For 6DOF Stewart Platform set flag False.
+"""
+
+center = np.array([0, 0, 0])
+radii = np.array([0.005, 0.003, 0])
+theta = np.pi / 6
+n_points = 50
+data4 = generate_elliptical_points(center, radii, theta, n_points)
+data4 = [[data4[i], np.zeros(3), 0.2] for i in range(len(data4))]
+"""
+Test 5 : Planner motion Stewart Platform:
+        - translation in x axis about 90 mm
+        - translation in y axis about 90 mm
+"""
+data5 = [[np.array([0,0.1,0]), np.array([0,0,0]), 2], 
+         [np.array([0.1,0,0]), np.array([0,0,0]), 2]]
+
+"""
+Test 6 : All tests:
+        - For 6DOF Stewart Platform set flag False.
+"""
+data = [data5, data1, data2, data4, data3]
+
 
 # Create the stewart platform object
-clf1 = sp(path, joint_indices, actuator_indices, design_variables)
-clf2 = sp(path, joint_indices, actuator_indices, design_variables)
-clf3 = sp(path, joint_indices, actuator_indices, design_variables)
-clf4 = sp(path, joint_indices, actuator_indices, design_variables)
+clf = sp(path, joint_indices, actuator_indices, design_variables)
 
 if __name__ == '__main__':
-    clf1.start_simmulation(data1, simulation=False)
-    clf2.start_simmulation(data2, simulation=False)
-    clf3.start_simmulation(data3,simulation=False,flag=False)
-    clf4.fit(data4, flag=[True, True,True, False], simulation=False)
+        clf.start_simmulation(data1, simulation=True)
+        # clf.start_simmulation(data2, simulation=False)
+        # clf.start_simmulation(data3,simulation=False,flag=True)
+        # clf.start_simmulation(data4,simulation=False,flag=True)
+        # clf.start_simmulation(data5, simulation=False)
+        # clf.fit(data, flag=[True, True,True, True, False ], simulation=False)
+        

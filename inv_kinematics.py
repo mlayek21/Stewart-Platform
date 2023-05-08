@@ -94,8 +94,8 @@ class inv_kinematics:
         self.B, self.P = self.frame()
 
         # Get rotation matrix of platform. RotZ* RotY * RotX -> matmul
-        R = np.matmul( np.matmul(self.rotZ(rotation[2]), self.rotY(rotation[1])), self.rotX(rotation[0]) )
-        # R = np.matmul( np.matmul(self.rotX(rotation[0]), self.rotY(rotation[1])), self.rotZ(rotation[2]) )
+        # R = np.matmul( np.matmul(self.rotZ(rotation[2]), self.rotY(rotation[1])), self.rotX(rotation[0]) )
+        R = np.matmul( np.matmul(self.rotX(rotation[0]), self.rotY(rotation[1])), self.rotZ(rotation[2]) )
 
         # Get leg length for each leg
         # leg = np.repeat(trans[:, np.newaxis], 6, axis=1) + np.repeat(home_pos[:, np.newaxis], 6, axis=1) + np.matmul(np.transpose(R), P) - B 
@@ -104,5 +104,6 @@ class inv_kinematics:
 
         # Position of leg in global frame
         self.L = l + self.B
-        # print(L)
+        # new_list = [(i, L) for i, L in enumerate(lll)]
+        # print(new_list)
         return lll
