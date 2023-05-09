@@ -51,13 +51,13 @@ Standard notation for the fundamental parameters that determine the mechanical c
 
 - $r_P\to$ Radius of Platform (Top)
 
-- $\gamma_B\to$ Half of angle between two anchors on the base
+- $\gamma_B\to$ Half of the angle between two anchors on the base
 
-- $\gamma_P\to$ Half of angle between two anchors on the platform
+- $\gamma_P\to$ Half of the angle between two anchors on the platform
 
 We may define $\psi_B \in R^{6 \times 1}$ & $\psi_P\in R^{6 \times 1}$ and the polar coordinates of the anchors on a unit circle radius using these $\gamma_B$ &  $\gamma_P$. These are derived from the gamma values of $B$ and $P$.
 
-If we have $r_B$ and $r_P$, then we may define as the coordinates of the anchors in their respective local frames in cartesian space, which are $B \in R^{6 \times 3}$ and $P\in R^{6 \times 3}$. For instance, an illustration of the anchor points on the base B may be found below.
+If we have $r_B$ and $r_P$, then we may define as the coordinates of the anchors in their respective local frames in cartesian space, which are $B \in R^{6 \times 3}$ and $P\in R^{6 \times 3}$. For instance, an illustration of the anchor points on base B may be found below.
 
 <p align="center">
   <img src="https://github.com/mlayek21/Stewart-Platform/blob/main/Files/output1.png">
@@ -118,7 +118,7 @@ Our model consists of six linear actuators that are connected to six individual 
 
 By using a lead screw mechanism, we are able to achieve a high mechanical advantage that allows us to move large loads with high accuracy and precision. The PWM technique provides us with fine-grained control over the position and speed of each actuator, allowing us to achieve smooth and precise motion.
 
-  ![Linearactuator](https://user-images.githubusercontent.com/110429424/236689504-32d416aa-392a-489a-941d-e2273c7410fe.gif)
+  ![ball-screw-gif](https://user-images.githubusercontent.com/110429424/236932849-3bbd2d12-02ba-40d0-b16a-270dc0c4cfcb.gif)
 
 ## Actuator Force Calculation
 
@@ -129,19 +129,19 @@ $$F_{total} = F_{friction} + F_{accleration}+ F_{load} + F_{applied}$$
 $$F_{total} = \mu F_{N} \cos(\phi) + \frac{m v}{t} + m g \sin(\theta) + F_{applied}$$
 Where, 
   - $m \to m_{Top}+m_{Load}$ Mass applied on the platform = 34 kg
-    - Let say platform can carry maxload of 20kg
+    - Let say the platform can carry max load of 20kg
     - Top weight is 14 kg approx
   - $g \to$ Earth gravity ($9.81 m/s^2$)
   - $\theta \to$ Inclination angle (63.94°)
   - $v \to$ Maximum velocity of actuation ($19 mm/s$)
-  - $t \to$ Time to actuate full length (20 second)
+  - $t \to$ Time to actuate full length (20 seconds)
   - $\mu \to$ Frictional coefficient of lead screw (0.4)
   - $\phi \to$ Angle of Normal Load (90°)
-    - Let assume load make 90° angle
+    - Let's assume the load make a 90° angle
   - $F_{N} \to$ Normal Force applied to the actuators
   - $F_{applied} \to$ Dynamic force ($\pm 10N$)
   
-After calculation $F_{total} \approx 360N$ is subjected of all six actuator i.e each actuator is carrying maxmium load of 60 N.
+After calculation $F_{total} \approx 360N$ is subjected to all six actuators i.e. each actuator is carrying a maximum load of 60 N.
 
 Now, The servo torque required for a 60N force in a linear actuator will depend on the mechanical advantage of the actuator system, which is determined by the lead screw pitch and the diameter of the lead screw.
 
@@ -187,7 +187,7 @@ By using this function, users can easily convert servo motion to linear actuatio
   - 30 degrees yaw within 4 seconds.
   - 20 degrees pitch within 3 seconds.
   - 15 degrees roll within 2 seconds.
-  - Return back to home position within 1 seconds.
+  - Return back to home position within 1 second.
 
 
 
@@ -195,10 +195,10 @@ https://user-images.githubusercontent.com/110429424/236542293-2a25bc12-8900-48a0
 
 
 - **Test 2:** Simulated a sequence of motions as follows:
-  - 30 degrees yaw and return back to pltform position within 4 seconds
-  - 20 degrees pitch return back to pltform position within 3 seconds
-  - 15 degrees roll return back to pltform position within 2 seconds
-  - Return back to home position within 1 seconds.
+  - 30 degrees yaw and return back to platform position within 4 seconds
+  - 20 degrees pitch return back to platform position within 3 seconds
+  - 15 degrees roll return back to platform position within 2 seconds
+  - Return back to home position within 1 second.
 
 
 https://user-images.githubusercontent.com/110429424/236542304-c84d24be-441e-4c34-8c80-f6634e645b60.mp4
@@ -213,14 +213,14 @@ https://user-images.githubusercontent.com/110429424/236542318-d370cea6-0fb8-4014
 
 
 # Conclusion
-  - The simulation was performed using a custom Python script that utilized the PyBullet physics engine for simulating the motion of the platform. The script included control algorithms that generated the required forces and torques for achieving the desired motion. We also designed a custom simulation environment that closely resembled the real-world setup of the platform.
+  - The simulation was performed using a custom Python script that utilized the PyBullet physics engine for simulating the platform's motion. The script included control algorithms that generated the required forces and torques for achieving the desired motion. We also designed a custom simulation environment that closely resembled the real-world setup of the platform.
 
-  - During the simulation, we monitored the position and orientation of the platform at each time step and recorded the resulting motion trajectories. The simulation results showed that the platform was able to achieve the desired RPR 3DOF motion accurately and smoothly.
+  - During the simulation, we monitored the position and orientation of the platform at each time step and recorded the resulting motion trajectories. The simulation results showed that the platform achieved the desired RPR 3DOF motion accurately and smoothly.
 
-  - Overall, this simulation provides valuable insights into the behavior of the RPR platform and can be used to optimize its design and control algorithms for real-world applications.
+  - Overall, this simulation provides valuable insights into the behaviour of the RPR platform and can be used to optimize its design and control algorithms for real-world applications.
   
 ---
-> **Unleashing the Power of the Stewart Platform:** 6DOF Simulation and More 👉🏼 [![YouTube Video Views](https://img.shields.io/youtube/views/Fk0oGJxcMWg?label=PlayVideo&logo=youtube&logoColor=%23ff0000&style=for-the-badge)](https://youtu.be/Fk0oGJxcMWg)
+> **Unleashing the Power of the Stewart Platform:** 6DOF Simulation and More 👉🏽 [![YouTube Video Views](https://img.shields.io/youtube/views/Fk0oGJxcMWg?label=PlayVideo&logo=youtube&logoColor=%23ff0000&style=for-the-badge)](https://youtu.be/Fk0oGJxcMWg)
 
 ```
 Author: Monojit Layek
