@@ -98,7 +98,7 @@ data = [data5, data1, data2, data4, data3]
 clf = sp(path, joint_indices, actuator_indices, design_variables)
 
 if __name__ == '__main__':
-        clf.start_simmulation(data1, simulation=True)
+        clf.start_simmulation(data1, simulation=False)
         clf.start_simmulation(data2, simulation=False)
         clf.start_simmulation(data3,simulation=False,flag=True)
         clf.start_simmulation(data4,simulation=False,flag=True)
