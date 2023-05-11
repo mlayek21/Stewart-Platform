@@ -19,7 +19,7 @@ The Stewart Platform is a type of parallel manipulator with six degrees of freed
 - **Cylinder Material:** The cylinder material is made of aluminum.
 - **Universal Joint Pin:** The universal joint pin is made of steel.
 - **Piston Rod:** The piston rod is made of titanium.
-- **Model Weight:** The total weight of the model is 37.5 kg.
+- **Model Weight:** The total weight of the model is 36.5 kg.
 - **Base and Platform Radius:** The base and platform have a radius of 200 mm.
 - **Base to Platform Height:** The distance between the base and platform is 257.5 mm.
 
@@ -97,7 +97,7 @@ Using the target translation vectors $T = (t_x,t_y,t_z)^T$ and the rotation vect
 After the plate has been rotated and translated as desired, all that remains is to determine the new locations of the various anchors.
 
 Given that each leg's job is to establish a connection between the base and the platform's anchor, the required vector (direction and length) for each leg is simply the leg's location in 3D space with respect to its corresponding base anchor.
-$$l = T+H+p+R(\theta)-B$$
+$$l = T+H+p \times R(\theta)-B$$
 Where, $T$ and $H$ are in $R^{3 \times 1}$ replicated 6 times to have dimensions $R^{3 \times 6}$ to facilitate matrix calculations.
 
 It's possible to interpret this as,
