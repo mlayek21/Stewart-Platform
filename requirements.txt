@@ -91,7 +91,7 @@ sympy==1.11.1
 terminado==0.15.0
 tinycss2==1.1.1
 tomli==2.0.1
-tornado==6.2
+tornado==6.3.2
 tqdm @ file:///home/conda/feedstock_root/build_artifacts/tqdm_1649051611147/work
 traitlets==5.3.0
 twine==4.0.2
