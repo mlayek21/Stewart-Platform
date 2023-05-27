@@ -220,8 +220,11 @@ https://user-images.githubusercontent.com/110429424/236542318-d370cea6-0fb8-4014
   - Overall, this simulation provides valuable insights into the behaviour of the RPR platform and can be used to optimize its design and control algorithms for real-world applications.
   
 ---
-> **Unleashing the Power of the Stewart Platform:** 6DOF Simulation and More 👇🏽
-<div align="center"><a href="https://youtu.be/Fk0oGJxcMWg"><img alt="YouTube Video Views" src="https://img.shields.io/youtube/views/Fk0oGJxcMWg?label=play%20Video&logo=youtube&logoColor=%23ff0000&style=for-the-badge"></div>
+> **Unleashing the Power of the Stewart Platform:**
+>> 6DOF Simulation and More 👉🏽 <a href="https://youtu.be/Fk0oGJxcMWg"><img src="https://github.com/mlayek21/Stewart-Platform/blob/main/Files/play-video-youtube-svgrepo-com.svg" width="50"></a> 
+
+>> Documentation 👉🏽
+<a href="https://github.com/mlayek21/Stewart-Platform/blob/main/Files/StewartPlatformDocument.pdf"><img src="https://github.com/mlayek21/Stewart-Platform/blob/main/Files/pdf-svgrepo-com.svg" width="40"></a>  
 
 ```
 Author: Monojit Layek
