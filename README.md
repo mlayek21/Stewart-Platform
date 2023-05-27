@@ -221,7 +221,7 @@ https://user-images.githubusercontent.com/110429424/236542318-d370cea6-0fb8-4014
   
 ---
 > **Unleashing the Power of the Stewart Platform:**
->> 6DOF Simulation and More 👉🏽 <a href="https://youtu.be/Fk0oGJxcMWg"><img src="https://github.com/mlayek21/Stewart-Platform/blob/main/Files/play-video-youtube-svgrepo-com.svg" width="40"></a> 
+>> 6DOF Simulation and More 👉🏽 <a href="https://youtu.be/Fk0oGJxcMWg"><img src="https://github.com/mlayek21/Stewart-Platform/blob/main/Files/play-video-youtube-svgrepo-com.svg" width="50"></a> 
 
 >> Documentation 👉🏽
 <a href="https://github.com/mlayek21/Stewart-Platform/blob/main/Files/StewartPlatformDocument.pdf"><img src="https://github.com/mlayek21/Stewart-Platform/blob/main/Files/pdf-svgrepo-com.svg" width="40"></a>  
