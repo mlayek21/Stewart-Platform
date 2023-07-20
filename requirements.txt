@@ -68,7 +68,7 @@ ptyprocess==0.7.0
 pure-eval==0.2.2
 pycosat @ file:///Users/runner/miniforge3/conda-bld/pycosat_1649384941891/work
 pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1636257122734/work
-Pygments==2.12.0
+Pygments==2.15.0
 pyOpenSSL @ file:///home/conda/feedstock_root/build_artifacts/pyopenssl_1643496850550/work
 pyparsing==3.0.9
 pyrsistent==0.18.1
