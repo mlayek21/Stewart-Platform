@@ -10,7 +10,7 @@ beautifulsoup4==4.11.1
 bleach==5.0.1
 brotlipy @ file:///Users/runner/miniforge3/conda-bld/brotlipy_1648854242877/work
 build==0.9.0
-certifi==2022.5.18.1
+certifi==2023.7.22
 cffi @ file:///Users/runner/miniforge3/conda-bld/cffi_1636046173594/work
 charset-normalizer @ file:///home/conda/feedstock_root/build_artifacts/charset-normalizer_1644853463426/work
 colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1602866480661/work
